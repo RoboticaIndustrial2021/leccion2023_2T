@@ -74,19 +74,19 @@ for i in objetos:
 for i in range(len(objetos)):
     robot.setPoseFrame(frame)
     pp = transl(posinit[len(posinit)-1-i])
-    aprox = 10
+    aprox = 150
     robot.MoveJ(targ)
     robot.MoveJ(pp*transl(0,0,aprox)*rotx(pi))
-    robot.MoveJ(pp*rotx(pi))
+    robot.MoveL(pp*rotx(pi))
     tool1.AttachClosest()
-    robot.MoveJ(robot.Pose()*transl(0,0,aprox))
+    robot.MoveL(robot.Pose()*transl(0,0,aprox))
     robot.MoveJ(targ)
     pp2 = transl(posinit[i])
     robot.setPoseFrame(frameplace)
     robot.MoveJ(pp2*transl(0,0,aprox)*rotx(-pi))
-    robot.MoveJ(pp2*rotx(pi))
+    robot.MoveL(pp2*rotx(pi))
     tool1.DetachAll(frameplace)
-    robot.MoveJ(pp2*transl(0,0,aprox)*rotx(pi))
+    robot.MoveL(pp2*transl(0,0,aprox)*rotx(pi))
 
 robot.setPoseFrame(frame)
 robot.MoveJ(targ)
