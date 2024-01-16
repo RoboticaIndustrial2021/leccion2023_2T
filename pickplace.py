@@ -21,7 +21,7 @@ frame=RDK.ItemUserPick("seleccione referencia \n donde se va a  clonar",framess)
 frameplace = RDK.ItemUserPick("seleccione referencia \n donde se va a dejar los objetos",framess)
 
 def botss():
-    itemss = RDK.ItemList()
+    itemss = RDK.ItemList(filter = ITEM_TYPE_OBJECT)
     botes = []
     for k in itemss:
         if k.Name().startswith("bot"):
