@@ -10,8 +10,8 @@ import random
 RDK = Robolink()
 
 tool1 = RDK.ItemUserPick('',ITEM_TYPE_TOOL) #herramienta a usar - ventosa simple
-robot = RDK.ItemUserPick("",ITEM_TYPE_ROBOT)    #robot a usar preferencia muy grandes com fanuc M-710iC/50
-targ = RDK.ItemUserPick("",ITEM_TYPE_TARGET)    #target de referencia para el movimiento eintermedio del robot
+robot = RDK.ItemUserPick("",ITEM_TYPE_ROBOT)    #robot a usar preferencia muy grandes como fanuc M-710iC/50
+targ = RDK.ItemUserPick("",ITEM_TYPE_TARGET)    #target de referencia para el movimiento intermedio del robot
 objetoss = RDK.ItemList(ITEM_TYPE_OBJECT)   #caja proporcionada para la simulacion
 
 bott=RDK.ItemUserPick("seleccione objeto a clonar",objetoss)
